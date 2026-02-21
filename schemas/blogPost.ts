@@ -31,14 +31,26 @@ export default defineType({
       name: 'contentEn',
       title: 'Content (English)',
       type: 'array',
-      of: [{type: 'block'}],
+      of: [
+        {type: 'block'},
+        {
+          type: 'image',
+          options: {hotspot: true},
+        },
+      ],
       validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'contentJa',
       title: 'Content (Japanese)',
       type: 'array',
-      of: [{type: 'block'}],
+      of: [
+        {type: 'block'},
+        {
+          type: 'image',
+          options: {hotspot: true},
+        },
+      ],
     }),
     defineField({
       name: 'category',
