@@ -33,10 +33,8 @@ export default defineType({
       type: 'array',
       of: [
         {type: 'block'},
-        {
-          type: 'image',
-          options: {hotspot: true},
-        },
+        {type: 'image', options: {hotspot: true}},
+        {type: 'youtube'},
       ],
       validation: Rule => Rule.required(),
     }),
@@ -45,12 +43,10 @@ export default defineType({
       title: 'Content (Japanese)',
       type: 'array',
       of: [
-        {type: 'block'},
-        {
-          type: 'image',
-          options: {hotspot: true},
-        },
-      ],
+          {type: 'block'},
+          {type: 'image', options: {hotspot: true}},
+          {type: 'youtube'},
+        ],
     }),
     defineField({
       name: 'category',

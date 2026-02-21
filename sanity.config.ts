@@ -1,6 +1,7 @@
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import blogPost from './schemas/blogPost'
+import youtube from './schemas/youtube'
 
 export default defineConfig({
   name: 'pala-labs',
@@ -9,6 +10,6 @@ export default defineConfig({
   dataset: 'production',
   plugins: [structureTool()],
   schema: {
-    types: [blogPost],
+    types: [blogPost, youtube],
   },
 })
