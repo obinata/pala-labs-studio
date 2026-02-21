@@ -5,9 +5,9 @@ function getYouTubeId(url: string) {
   return match ? match[1] : null
 }
 
-function YouTubePreview({value}: {value?: {url?: string}}) {
-  const id = value?.url ? getYouTubeId(value.url) : null
-  if (!id) return <div style={{padding: '1rem', background: '#f0f0f0'}}>YouTubeのURLを入力してください</div>
+function YouTubePreview({url}: {url?: string}) {
+  const id = url ? getYouTubeId(url) : null
+  if (!id) return <div style={{padding: '1rem', background: '#f0f0f0'}}>YouTube Video URL</div>
   return (
     <iframe
       width="100%"
