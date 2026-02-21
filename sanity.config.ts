@@ -1,15 +1,15 @@
-import {defineConfig} from 'sanity'
-import {structureTool} from 'sanity/structure'
-import blogPost from './schemas/blogPost'
-import youtube from './schemas/youtube'
+import { defineConfig } from "sanity";
+import { structureTool } from "sanity/structure";
+import blogPost from "./schemas/blogPost";
+import youtube from "./schemas/youtube.tsx";
 
 export default defineConfig({
-  name: 'pala-labs',
-  title: 'Pala Labs Studio',
-  projectId: 'iot4hik7',
-  dataset: 'production',
+  name: "pala-labs",
+  title: "Pala Labs Studio",
+  projectId: "iot4hik7",
+  dataset: "production",
   plugins: [structureTool()],
   schema: {
     types: [blogPost, youtube],
   },
-})
+});
