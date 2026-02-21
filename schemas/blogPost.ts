@@ -30,13 +30,15 @@ export default defineType({
     defineField({
       name: 'contentEn',
       title: 'Content (English)',
-      type: 'text',
+      type: 'array',
+      of: [{type: 'block'}],
       validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'contentJa',
       title: 'Content (Japanese)',
-      type: 'text',
+      type: 'array',
+      of: [{type: 'block'}],
     }),
     defineField({
       name: 'category',
