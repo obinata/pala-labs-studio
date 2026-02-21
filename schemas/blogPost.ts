@@ -39,6 +39,16 @@ export default defineType({
       validation: Rule => Rule.required(),
     }),
     defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'titleEn',
+        maxLength: 96,
+      },
+      validation: Rule => Rule.required(),
+    }),
+    defineField({
       name: 'contentJa',
       title: 'Content (Japanese)',
       type: 'array',
