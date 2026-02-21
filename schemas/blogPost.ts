@@ -33,7 +33,17 @@ export default defineType({
       type: 'array',
       of: [
         {type: 'block'},
-        {type: 'image', options: {hotspot: true}},
+        {
+          type: 'image',
+          options: {hotspot: true},
+          fields: [
+            {
+              name: 'caption',
+              type: 'string',
+              title: 'Caption',
+            }
+          ]
+        },
         {type: 'youtube'},
       ],
       validation: Rule => Rule.required(),
@@ -54,7 +64,17 @@ export default defineType({
       type: 'array',
       of: [
           {type: 'block'},
-          {type: 'image', options: {hotspot: true}},
+          {
+            type: 'image',
+            options: {hotspot: true},
+            fields: [
+              {
+                name: 'caption',
+                type: 'string',
+                title: 'Caption',
+              }
+            ]
+          },
           {type: 'youtube'},
         ],
     }),

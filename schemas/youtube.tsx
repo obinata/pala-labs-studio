@@ -28,6 +28,11 @@ export default defineType({
       type: 'url',
       title: 'YouTube URL',
     }),
+    defineField({
+      name: 'caption',
+      type: 'string',
+      title: 'Caption',
+    }),
   ],
   components: {preview: YouTubePreview},
   preview: {select: {url: 'url'}},
