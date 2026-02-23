@@ -59,6 +59,13 @@ export default defineType({
       validation: Rule => Rule.required(),
     }),
     defineField({
+      name: 'featuredImage',
+      title: 'Featured Image',
+      type: 'image',
+      options: {hotspot: true},
+      description: 'OG画像としてSNSシェア時に表示されます（推奨: 1200×630px）',
+    }),
+    defineField({
       name: 'contentJa',
       title: 'Content (Japanese)',
       type: 'array',
