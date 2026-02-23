@@ -63,7 +63,7 @@ export default defineType({
       title: 'Featured Image',
       type: 'image',
       options: {hotspot: true},
-      description: 'OG画像としてSNSシェア時に表示されます（推奨: 1200×630px）',
+      description: 'Displayed as the OG image when shared on social media (recommended: 1200×630px)',
     }),
     defineField({
       name: 'contentJa',
